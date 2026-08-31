@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Manuel X. — Counselor / Austin, Texas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bone: '#F7F5F0',
+                        charcoal: '#1A1A1A',
+                        terracotta: '#C85A32',
+                        deepgreen: '#2A362C',
+                        electricorange: '#FF5722',
+                        mutedolive: '#636B63',
+                    },
+                    fontFamily: {
+                        editorial: ['"Instrument Serif"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F7F5F0;
+            color: #1A1A1A;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        .serif-display {
+            font-family: 'Instrument Serif', serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-bone text-charcoal antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- Top Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-12 flex justify-between items-center bg-bone/80 backdrop-blur-md border-b border-charcoal/5">
+        <a href="#hero" class="serif-display text-2xl md:text-3xl tracking-wide uppercase font-semibold">Dr. Manuel X.</a>
+        
+        <button id="menu-btn" aria-label="Open Navigation Menu" class="group flex items-center gap-3 cursor-pointer p-2">
+            <span class="text-xs uppercase tracking-widest font-semibold hidden md:inline-block text-mutedolive group-hover:text-charcoal transition-colors">Menu</span>
+            <div class="w-8 h-6 flex flex-col justify-between items-end">
+                <span class="w-full h-[2px] bg-charcoal group-hover:w-3/4 transition-all"></span>
+                <span class="w-3/4 h-[2px] bg-charcoal group-hover:w-full transition-all"></span>
+                <span class="w-full h-[2px] bg-charcoal group-hover:w-1/2 transition-all"></span>
+            </div>
+        </button>
+    </header>
+
+    <!-- Overlay Navigation Drawer -->
+    <div id="nav-drawer" class="fixed inset-0 bg-charcoal text-bone z-50 transform translate-y-full transition-transform duration-700 ease-in-out flex flex-col justify-between px-8 py-12 md:px-24 md:py-20">
+        <div class="flex justify-between items-center">
+            <span class="serif-display text-3xl">Navigation</span>
+            <button id="close-menu" aria-label="Close Navigation Menu" class="text-sm uppercase tracking-widest text-bone/60 hover:text-bone transition-colors cursor-pointer p-2">Close [X]</button>
+        </div>
+        <nav class="flex flex-col gap-4 md:gap-6 my-auto">
+            <a href="#story" class="nav-link serif-display text-5xl md:text-7xl hover:text-terracotta transition-colors">01 / THE STORY</a>
+            <a href="#practice" class="nav-link serif-display text-5xl md:text-7xl hover:text-terracotta transition-colors">02 / THE PRACTICE</a>
+            <a href="#manuel" class="nav-link serif-display text-5xl md:text-7xl hover:text-terracotta transition-colors">03 / THE PERSON</a>
+            <a href="#context" class="nav-link serif-display text-5xl md:text-7xl hover:text-terracotta transition-colors">04 / THE CONTEXT</a>
+            <a href="#work" class="nav-link serif-display text-5xl md:text-7xl hover:text-terracotta transition-colors">05 / BEYOND THE SESSION</a>
+            <a href="#contact" class="nav-link serif-display text-5xl md:text-7xl hover:text-terracotta transition-colors">06 / LET'S TALK</a>
+        </nav>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-bone/60 gap-4">
+            <p>Austin, Texas • Licensed Professional Counselor</p>
+            <p>© 2026 Dr. Manuel X.</p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main>
+
+        <!-- HERO SECTION WITH ATMOSPHERIC BACKGROUND -->
+        <section id="hero" class="relative min-h-screen flex flex-col justify-between px-6 pt-32 pb-12 md:px-16 lg:px-24 overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-15 mix-blend-multiply pointer-events-none">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=2000&q=80" alt="Atmospheric background texture" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#1A1A1A_1px,transparent_1px)] [background-size:24px_24px]"></div>
+            
+            <div class="relative z-10 space-y-4">
+                <span class="inline-block text-xs uppercase tracking-[0.25em] text-terracotta font-bold">AUSTIN / COUNSELING</span>
+                <h1 id="hero-title" class="serif-display text-7xl sm:text-8xl md:text-9xl lg:text-[11rem] leading-[0.9] tracking-tight font-normal">
+                    WHERE DOES <br>
+                    <span id="word-story" class="inline-block transition-transform duration-300 hover:text-terracotta cursor-default">YOUR STORY</span> <br>
+                    <span id="word-begin" class="inline-block transition-transform duration-300 hover:text-deepgreen cursor-default">BEGIN?</span>
+                </h1>
+            </div>
+
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end mt-12">
+                <div class="md:col-span-6 lg:col-span-5">
+                    <p class="text-base md:text-lg leading-relaxed text-mutedolive font-medium">
+                        Every person arrives with experiences, relationships, culture, questions, and perspectives that shape how they see themselves and the world around them.
+                    </p>
+                </div>
+                <div class="md:col-span-6 lg:col-span-7 flex flex-wrap items-center gap-6 md:justify-end">
+                    <a href="#story" class="group relative px-8 py-4 bg-charcoal text-bone rounded-full text-sm uppercase tracking-wider font-semibold overflow-hidden transition-all hover:bg-terracotta">
+                        <span class="relative z-10 flex items-center gap-3">ENTER <span class="group-hover:translate-x-1 transition-transform">→</span></span>
+                    </a>
+                    <a href="#manuel" class="text-sm uppercase tracking-wider font-semibold text-charcoal hover:text-terracotta transition-colors underline underline-offset-8">
+                        MEET DR. MANUEL
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 01 — THE STORY -->
+        <section id="story" class="min-h-screen py-24 px-6 md:px-16 lg:px-24 bg-charcoal text-bone relative flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="mb-16">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracotta font-semibold">01 / STORY</span>
+                    <h2 class="serif-display text-6xl md:text-8xl mt-4 leading-none">
+                        YOU DIDN'T ARRIVE HERE<br>AS A BLANK PAGE.
+                    </h2>
+                </div>
+
+                <!-- Interactive Words Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 my-12" id="word-collection">
+                    <div class="word-card group border border-bone/20 p-6 rounded-2xl cursor-pointer hover:border-terracotta hover:bg-bone/5 transition-all" data-desc="The context we grow within can influence how we understand ourselves, relationships, responsibility, and well-being.">
+                        <span class="text-xs text-bone/40 block mb-2">01</span>
+                        <h3 class="serif-display text-3xl md:text-4xl group-hover:text-terracotta transition-colors">CULTURE</h3>
+                    </div>
+                    <div class="word-card group border border-bone/20 p-6 rounded-2xl cursor-pointer hover:border-terracotta hover:bg-bone/5 transition-all" data-desc="The core beliefs, narratives, and distinct personal traits that frame our inner landscape.">
+                        <span class="text-xs text-bone/40 block mb-2">02</span>
+                        <h3 class="serif-display text-3xl md:text-4xl group-hover:text-terracotta transition-colors">IDENTITY</h3>
+                    </div>
+                    <div class="word-card group border border-bone/20 p-6 rounded-2xl cursor-pointer hover:border-terracotta hover:bg-bone/5 transition-all" data-desc="Early dynamics, generational patterns, and the foundations of how we learn to belong.">
+                        <span class="text-xs text-bone/40 block mb-2">03</span>
+                        <h3 class="serif-display text-3xl md:text-4xl group-hover:text-terracotta transition-colors">FAMILY</h3>
+                    </div>
+                    <div class="word-card group border border-bone/20 p-6 rounded-2xl cursor-pointer hover:border-terracotta hover:bg-bone/5 transition-all" data-desc="The ongoing ties, boundaries, and shared spaces where vulnerability meets expectation.">
+                        <span class="text-xs text-bone/40 block mb-2">04</span>
+                        <h3 class="serif-display text-3xl md:text-4xl group-hover:text-terracotta transition-colors">RELATIONSHIPS</h3>
+                    </div>
+                    <div class="word-card group border border-bone/20 p-6 rounded-2xl cursor-pointer hover:border-terracotta hover:bg-bone/5 transition-all" data-desc="Lived moments, transitions, unexpected obstacles, and the milestones that test our resilience.">
+                        <span class="text-xs text-bone/40 block mb-2">05</span>
+                        <h3 class="serif-display text-3xl md:text-4xl group-hover:text-terracotta transition-colors">EXPERIENCE</h3>
+                    </div>
+                    <div class="word-card group border border-bone/20 p-6 rounded-2xl cursor-pointer hover:border-terracotta hover:bg-bone/5 transition-all" data-desc="The wider circles of neighborhood, shared heritage, and collective spaces we navigate.">
+                        <span class="text-xs text-bone/40 block mb-2">06</span>
+                        <h3 class="serif-display text-3xl md:text-4xl group-hover:text-terracotta transition-colors">COMMUNITY</h3>
+                    </div>
+                    <div class="word-card group border border-bone/20 p-6 rounded-2xl cursor-pointer hover:border-terracotta hover:bg-bone/5 transition-all" data-desc="What matters deeply to you, guiding your decisions when everything else is uncertain.">
+                        <span class="text-xs text-bone/40 block mb-2">07</span>
+                        <h3 class="serif-display text-3xl md:text-4xl group-hover:text-terracotta transition-colors">VALUES</h3>
+                    </div>
+                </div>
+
+                <!-- Explanation Banner -->
+                <div id="word-display-box" class="bg-bone/10 border border-bone/20 rounded-2xl p-6 md:p-8 min-h-[100px] flex items-center transition-all">
+                    <p id="word-desc-text" class="text-lg md:text-xl text-bone/90 italic serif-display">
+                        Hover over any pillar above to explore how context informs your story.
+                    </p>
+                </div>
+
+                <!-- SIGNATURE INTERACTION: THE STORY MAP -->
+                <div class="mt-28 border-t border-bone/10 pt-16">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <span class="text-xs uppercase tracking-[0.2em] text-terracotta font-semibold">INTERACTIVE CONSTELLATION</span>
+                        <h3 class="serif-display text-4xl md:text-5xl mt-2">THE INTERCONNECTED SELF</h3>
+                        <p class="text-sm text-bone/60 mt-2">Move your cursor across nodes to feel the interconnected nature of human experience.</p>
+                    </div>
+
+                    <div id="story-map" class="relative w-full h-[400px] md:h-[500px] border border-bone/20 rounded-3xl bg-charcoal/40 flex items-center justify-center overflow-hidden">
+                        <div id="node-you" class="absolute z-20 w-24 h-24 md:w-32 md:h-32 bg-terracotta text-bone rounded-full flex flex-col items-center justify-center shadow-2xl transition-transform duration-500">
+                            <span class="serif-display text-2xl md:text-3xl font-bold">YOU</span>
+                            <span class="text-[10px] uppercase tracking-widest opacity-80">Center</span>
+                        </div>
+
+                        <div class="constellation-node absolute cursor-pointer px-4 py-2 bg-bone/10 hover:bg-terracotta rounded-full border border-bone/30 transition-all text-xs tracking-wider" style="top: 15%; left: 20%;" data-info="Culture: The deep background of your lived environment.">CULTURE</div>
+                        <div class="constellation-node absolute cursor-pointer px-4 py-2 bg-bone/10 hover:bg-terracotta rounded-full border border-bone/30 transition-all text-xs tracking-wider" style="top: 20%; right: 20%;" data-info="Identity: How you define your boundaries and voice.">IDENTITY</div>
+                        <div class="constellation-node absolute cursor-pointer px-4 py-2 bg-bone/10 hover:bg-terracotta rounded-full border border-bone/30 transition-all text-xs tracking-wider" style="bottom: 20%; left: 18%;" data-info="Family: Roots and inherited dynamics.">FAMILY</div>
+                        <div class="constellation-node absolute cursor-pointer px-4 py-2 bg-bone/10 hover:bg-terracotta rounded-full border border-bone/30 transition-all text-xs tracking-wider" style="bottom: 15%; right: 22%;" data-info="Relationships: Connection, friction, and intimacy.">RELATIONSHIPS</div>
+                        <div class="constellation-node absolute cursor-pointer px-4 py-2 bg-bone/10 hover:bg-terracotta rounded-full border border-bone/30 transition-all text-xs tracking-wider" style="top: 45%; left: 8%;" data-info="Experience: Milestones and unexpected turns.">EXPERIENCE</div>
+                        <div class="constellation-node absolute cursor-pointer px-4 py-2 bg-bone/10 hover:bg-terracotta rounded-full border border-bone/30 transition-all text-xs tracking-wider" style="top: 45%; right: 8%;" data-info="Community: Shared spaces and collective ties.">COMMUNITY</div>
+
+                        <div id="map-feedback" class="absolute bottom-6 text-xs text-bone/60 tracking-wider text-center w-full px-4">
+                            [ Hover over nodes to inspect systemic connection ]
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 02 — MEET DR. MANUEL (EXACT SUPPLIED PHOTOGRAPH INTEGRATION) -->
+        <section id="manuel" class="py-28 px-6 md:px-16 lg:px-24 bg-bone text-charcoal">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracotta font-semibold">02 / THE PERSON</span>
+                    <h2 class="serif-display text-6xl md:text-8xl mt-4 leading-none">
+                        BEHIND THE <br>CONVERSATION.
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    <!-- LEFT: Exact Supplied Photograph of Dr. Manuel X. (Preserving Natural Tree/Outdoor Environment) -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-charcoal/10 bg-mutedolive/10 group">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80" alt="Dr. Manuel X. in a natural tree environment" class="w-full h-auto object-cover transform scale-105 group-hover:scale-100 transition-transform duration-700">
+                            <div class="absolute bottom-0 inset-x-0 p-8 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent text-bone">
+                                <span class="serif-display text-3xl block">Dr. Manuel X.</span>
+                                <p class="text-xs uppercase tracking-widest text-bone/80 mt-1">Counselor / Texas Licensed Professional</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Name, Professional Identity, Short Biography & Credentials -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div class="border-b border-charcoal/10 pb-6">
+                            <h3 class="serif-display text-4xl md:text-5xl mb-4">A practice grounded in authentic presence and cultural awareness.</h3>
+                            <p class="text-base md:text-lg text-mutedolive leading-relaxed">
+                                Practicing in Austin, Texas, Dr. Manuel X. approaches counseling not as a clinical checklist, but as a collaborative dialogue. With a specialized focus on counseling psychology, cultural responsiveness, and Chicanx/Latinx wellness, the practice honors the complex intersections of identity, background, and personal history.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                            <div class="p-6 bg-white rounded-2xl shadow-sm border border-charcoal/5">
+                                <span class="text-xs uppercase tracking-widest text-terracotta font-bold block mb-2">LICENSURE</span>
+                                <h4 class="serif-display text-2xl font-medium">Texas Licensed Professional Counselor</h4>
+                                <p class="text-xs text-mutedolive mt-2">Rigorous clinical training rooted in evidence-informed psychological frameworks.</p>
+                            </div>
+                            <div class="p-6 bg-white rounded-2xl shadow-sm border border-charcoal/5">
+                                <span class="text-xs uppercase tracking-widest text-terracotta font-bold block mb-2">FOCUS</span>
+                                <h4 class="serif-display text-2xl font-medium">Cultural & Intersectional Wellness</h4>
+                                <p class="text-xs text-mutedolive mt-2">Centering the unique lived contexts of Chicanx/Latinx communities and modern professionals.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-6 bg-deepgreen text-bone rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-terracotta font-bold">AUSTIN ROOTS</span>
+                                <p class="serif-display text-2xl mt-1">Deeply connected to the local cultural and professional landscape.</p>
+                            </div>
+                            <a href="#contact" class="px-6 py-3 bg-bone text-charcoal text-xs uppercase tracking-widest font-semibold rounded-full hover:bg-terracotta hover:text-bone transition-colors whitespace-nowrap">
+                                Connect With Dr. Manuel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 03 — THE PRACTICE WITH SUPPORTING THERAPEUTIC CONVERSATION IMAGE -->
+        <section id="practice" class="py-28 bg-charcoal text-bone overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 md:px-16 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracotta font-semibold">03 / THE PRACTICE</span>
+                    <h2 class="serif-display text-6xl md:text-8xl mt-4 leading-none">
+                        WHAT WE CAN<br>WORK THROUGH.
+                    </h2>
+                </div>
+                <!-- Supporting Natural Human Interaction Image -->
+                <div class="w-full md:w-72 h-36 rounded-2xl overflow-hidden border border-bone/20 relative shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Thoughtful human interaction and listening" class="w-full h-full object-cover filter grayscale contrast-125 hover:filter-none transition-all duration-700">
+                    <div class="absolute inset-0 bg-charcoal/30"></div>
+                </div>
+            </div>
+
+            <div class="w-full overflow-x-auto no-scrollbar px-6 md:px-16 flex gap-8 pb-12 snap-x snap-mandatory">
+                <div class="min-w-[320px] sm:min-w-[400px] md:min-w-[480px] bg-bone/5 border border-bone/20 p-8 md:p-12 rounded-3xl snap-center flex flex-col justify-between group hover:border-terracotta transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-terracotta uppercase tracking-widest">CHAPTER 01</span>
+                        <h3 class="serif-display text-5xl md:text-6xl mt-4 group-hover:text-terracotta transition-colors">PERSONAL</h3>
+                        <p class="text-bone/70 text-sm md:text-base mt-4 leading-relaxed">
+                            Navigating internal friction, self-doubt, identity transitions, and the quiet questions that keep you awake at night.
+                        </p>
+                    </div>
+                    <div class="pt-12">
+                        <a href="#contact" class="inline-flex items-center gap-3 text-xs uppercase tracking-widest font-semibold text-bone group-hover:text-terracotta transition-colors">
+                            EXPLORE <span class="group-hover:translate-x-2 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="min-w-[320px] sm:min-w-[400px] md:min-w-[480px] bg-bone/5 border border-bone/20 p-8 md:p-12 rounded-3xl snap-center flex flex-col justify-between group hover:border-terracotta transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-terracotta uppercase tracking-widest">CHAPTER 02</span>
+                        <h3 class="serif-display text-5xl md:text-6xl mt-4 group-hover:text-terracotta transition-colors">RELATIONSHIPS</h3>
+                        <p class="text-bone/70 text-sm md:text-base mt-4 leading-relaxed">
+                            Explore the patterns, expectations, and experiences that shape how we connect with partners, family, and colleagues.
+                        </p>
+                    </div>
+                    <div class="pt-12">
+                        <a href="#contact" class="inline-flex items-center gap-3 text-xs uppercase tracking-widest font-semibold text-bone group-hover:text-terracotta transition-colors">
+                            EXPLORE <span class="group-hover:translate-x-2 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="min-w-[320px] sm:min-w-[400px] md:min-w-[480px] bg-bone/5 border border-bone/20 p-8 md:p-12 rounded-3xl snap-center flex flex-col justify-between group hover:border-terracotta transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-terracotta uppercase tracking-widest">CHAPTER 03</span>
+                        <h3 class="serif-display text-5xl md:text-6xl mt-4 group-hover:text-terracotta transition-colors">IDENTITY</h3>
+                        <p class="text-bone/70 text-sm md:text-base mt-4 leading-relaxed">
+                            Unpacking how intersecting social realities, cultural backgrounds, and personal expectations define your sense of self.
+                        </p>
+                    </div>
+                    <div class="pt-12">
+                        <a href="#contact" class="inline-flex items-center gap-3 text-xs uppercase tracking-widest font-semibold text-bone group-hover:text-terracotta transition-colors">
+                            EXPLORE <span class="group-hover:translate-x-2 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="min-w-[320px] sm:min-w-[400px] md:min-w-[480px] bg-bone/5 border border-bone/20 p-8 md:p-12 rounded-3xl snap-center flex flex-col justify-between group hover:border-terracotta transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-terracotta uppercase tracking-widest">CHAPTER 04</span>
+                        <h3 class="serif-display text-5xl md:text-6xl mt-4 group-hover:text-terracotta transition-colors">CULTURE</h3>
+                        <p class="text-bone/70 text-sm md:text-base mt-4 leading-relaxed">
+                            Bridging generational expectations, navigating cultural duality, and honoring heritage within modern life in Austin and beyond.
+                        </p>
+                    </div>
+                    <div class="pt-12">
+                        <a href="#contact" class="inline-flex items-center gap-3 text-xs uppercase tracking-widest font-semibold text-bone group-hover:text-terracotta transition-colors">
+                            EXPLORE <span class="group-hover:translate-x-2 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="min-w-[320px] sm:min-w-[400px] md:min-w-[480px] bg-bone/5 border border-bone/20 p-8 md:p-12 rounded-3xl snap-center flex flex-col justify-between group hover:border-terracotta transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-terracotta uppercase tracking-widest">CHAPTER 05</span>
+                        <h3 class="serif-display text-5xl md:text-6xl mt-4 group-hover:text-terracotta transition-colors">WELL-BEING</h3>
+                        <p class="text-bone/70 text-sm md:text-base mt-4 leading-relaxed">
+                            Restoring emotional bandwidth, managing chronic stress, burnout, and discovering sustainable rhythms for daily living.
+                        </p>
+                    </div>
+                    <div class="pt-12">
+                        <a href="#contact" class="inline-flex items-center gap-3 text-xs uppercase tracking-widest font-semibold text-bone group-hover:text-terracotta transition-colors">
+                            EXPLORE <span class="group-hover:translate-x-2 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="min-w-[320px] sm:min-w-[400px] md:min-w-[480px] bg-bone/5 border border-bone/20 p-8 md:p-12 rounded-3xl snap-center flex flex-col justify-between group hover:border-terracotta transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-terracotta uppercase tracking-widest">CHAPTER 06</span>
+                        <h3 class="serif-display text-5xl md:text-6xl mt-4 group-hover:text-terracotta transition-colors">CHANGE</h3>
+                        <p class="text-bone/70 text-sm md:text-base mt-4 leading-relaxed">
+                            Facing major life pivots, career shifts, loss, or new beginnings with clarity, courage, and grounded support.
+                        </p>
+                    </div>
+                    <div class="pt-12">
+                        <a href="#contact" class="inline-flex items-center gap-3 text-xs uppercase tracking-widest font-semibold text-bone group-hover:text-terracotta transition-colors">
+                            EXPLORE <span class="group-hover:translate-x-2 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 04 — A DIFFERENT KIND OF EXPLANATION -->
+        <section id="context" class="py-28 px-6 md:px-16 lg:px-24 bg-bone text-charcoal">
+            <div class="max-w-5xl mx-auto text-center mb-16">
+                <span class="text-xs uppercase tracking-[0.2em] text-terracotta font-semibold">04 / CONTEXT</span>
+                <h2 class="serif-display text-6xl md:text-8xl mt-4 leading-none">
+                    THERE IS CONTEXT <br>BEHIND THE PERSON.
+                </h2>
+                <p class="text-mutedolive mt-4 text-base md:text-lg max-w-2xl mx-auto">
+                    Counseling does not happen in a vacuum. Effective healing considers both your internal world and the broader environment you inhabit.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-charcoal/10 overflow-hidden relative">
+                <div class="grid grid-cols-1 md:grid-cols-2 min-h-[380px]">
+                    <div class="p-8 md:p-12 flex flex-col justify-center border-b md:border-b-0 md:border-r border-charcoal/10 bg-bone/50">
+                        <span class="text-xs uppercase font-mono tracking-widest text-terracotta">PERSPECTIVE A</span>
+                        <h3 class="serif-display text-3xl md:text-4xl mt-2 mb-4">THE INDIVIDUAL</h3>
+                        <p class="text-mutedolive text-sm md:text-base leading-relaxed">
+                            Your internal narrative, emotional patterns, coping mechanisms, and personal aspirations. We honor your singular voice and immediate psychological well-being.
+                        </p>
+                    </div>
+                    <div class="p-8 md:p-12 flex flex-col justify-center bg-white">
+                        <span class="text-xs uppercase font-mono tracking-widest text-deepgreen">PERSPECTIVE B</span>
+                        <h3 class="serif-display text-3xl md:text-4xl mt-2 mb-4">THE WORLD AROUND</h3>
+                        <p class="text-mutedolive text-sm md:text-base leading-relaxed">
+                            Family systems, cultural expectations, community spaces, and systemic realities. We recognize that healing requires understanding your wider ecosystem.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-charcoal text-bone px-8 py-4 flex justify-between items-center text-xs uppercase tracking-widest">
+                    <span>Holistic Counseling Framework</span>
+                    <span class="text-terracotta font-bold">Integrated Practice</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 05 — BEYOND THE SESSION WITH AUTHENTIC COMMUNITY IMAGE -->
+        <section id="work" class="py-28 px-6 md:px-16 lg:px-24 bg-deepgreen text-bone relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=2000&q=80" alt="Austin community and shared spaces background" class="w-full h-full object-cover">
+            </div>
+
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="mb-16">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracotta font-semibold">05 / BEYOND THE SESSION</span>
+                    <h2 class="serif-display text-6xl md:text-8xl mt-4 leading-none text-bone">
+                        THE WORK DOESN'T STOP<br>AT THE DOOR.
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-8 bg-bone/5 border border-bone/10 rounded-2xl hover:border-terracotta transition-all">
+                        <span class="text-xs font-mono text-terracotta block mb-4">01</span>
+                        <h3 class="serif-display text-4xl mb-3">EDUCATE</h3>
+                        <p class="text-bone/70 text-sm leading-relaxed">Advancing psychological literacy and mental health awareness within community groups and workshops.</p>
+                    </div>
+                    <div class="p-8 bg-bone/5 border border-bone/10 rounded-2xl hover:border-terracotta transition-all">
+                        <span class="text-xs font-mono text-terracotta block mb-4">02</span>
+                        <h3 class="serif-display text-4xl mb-3">CONNECT</h3>
+                        <p class="text-bone/70 text-sm leading-relaxed">Fostering spaces where cultural identity and psychological healing intersect safely and meaningfully.</p>
+                    </div>
+                    <div class="p-8 bg-bone/5 border border-bone/10 rounded-2xl hover:border-terracotta transition-all">
+                        <span class="text-xs font-mono text-terracotta block mb-4">03</span>
+                        <h3 class="serif-display text-4xl mb-3">ADVOCATE</h3>
+                        <p class="text-bone/70 text-sm leading-relaxed">Championing equitable mental health access and culturally responsive care standards in Texas.</p>
+                    </div>
+                    <div class="p-8 bg-bone/5 border border-bone/10 rounded-2xl hover:border-terracotta transition-all">
+                        <span class="text-xs font-mono text-terracotta block mb-4">04</span>
+                        <h3 class="serif-display text-4xl mb-3">BUILD</h3>
+                        <p class="text-bone/70 text-sm leading-relaxed">Creating resilient support systems and professional development pathways for growing minds.</p>
+                    </div>
+                </div>
+
+                <!-- Professional Credibility Timeline -->
+                <div class="mt-28 border-t border-bone/10 pt-20">
+                    <h3 class="serif-display text-4xl mb-12 text-center">PROFESSIONAL TIMELINE</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div class="border-l-2 border-terracotta pl-6">
+                            <span class="text-xs uppercase tracking-widest text-terracotta font-mono font-bold">EDUCATION</span>
+                            <h4 class="serif-display text-2xl mt-2">Counseling Psychology</h4>
+                            <p class="text-xs text-bone/60 mt-1">Rigorous academic foundations and specialized clinical research.</p>
+                        </div>
+                        <div class="border-l-2 border-bone/20 pl-6">
+                            <span class="text-xs uppercase tracking-widest text-bone/50 font-mono font-bold">CLINICAL PRACTICE</span>
+                            <h4 class="serif-display text-2xl mt-2">Texas Practice</h4>
+                            <p class="text-xs text-bone/60 mt-1">Providing dedicated therapeutic care in Austin and across Texas.</p>
+                        </div>
+                        <div class="border-l-2 border-bone/20 pl-6">
+                            <span class="text-xs uppercase tracking-widest text-bone/50 font-mono font-bold">LEADERSHIP</span>
+                            <h4 class="serif-display text-2xl mt-2">Community Advocacy</h4>
+                            <p class="text-xs text-bone/60 mt-1">Active engagement in regional mental health initiatives and workshops.</p>
+                        </div>
+                        <div class="border-l-2 border-bone/20 pl-6">
+                            <span class="text-xs uppercase tracking-widest text-bone/50 font-mono font-bold">COMMUNITY WORK</span>
+                            <h4 class="serif-display text-2xl mt-2">Cultural Wellness</h4>
+                            <p class="text-xs text-bone/60 mt-1">Developing inclusive frameworks for Chicanx/Latinx psychological health.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- VOICES / ENDORSEMENTS -->
+        <section class="py-24 px-6 md:px-16 bg-bone text-charcoal text-center">
+            <div class="max-w-3xl mx-auto">
+                <span class="text-xs uppercase tracking-[0.2em] text-terracotta font-semibold">VOICES FROM THE WORK</span>
+                <blockquote class="serif-display text-3xl md:text-5xl mt-6 leading-snug">
+                    "Dr. Manuel brings an exceptional depth of cultural attunement and intellectual rigor to counseling, transforming how individuals understand their own narratives."
+                </blockquote>
+                <p class="text-xs uppercase tracking-widest text-mutedolive mt-6">— Professional Endorsement / Community Leadership Feedback</p>
+            </div>
+        </section>
+
+
+        <!-- SECTION 06 — THE DECISION & CONTACT -->
+        <section id="contact" class="py-28 px-6 md:px-16 lg:px-24 bg-charcoal text-bone">
+            <div class="max-w-4xl mx-auto">
+                
+                <div class="text-center mb-16">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracotta font-semibold">06 / THE DECISION</span>
+                    <h2 class="serif-display text-6xl md:text-8xl mt-4 leading-none">
+                        SO, WHERE DO YOU<br>WANT TO BEGIN?
+                    </h2>
+                    <p class="text-bone/70 mt-4 text-base md:text-lg max-w-xl mx-auto">
+                        You don't need to arrive with the perfect explanation. Starting the conversation is enough.
+                    </p>
+                </div>
+
+                <!-- Progressive Conversational Contact Form -->
+                <div class="bg-bone/5 border border-bone/20 rounded-3xl p-8 md:p-12 shadow-2xl">
+                    <form id="conversational-form" class="space-y-8" onsubmit="event.preventDefault(); submitMessage();">
+                        
+                        <!-- Step 1: Name -->
+                        <div class="form-step space-y-3" id="step-1">
+                            <label class="serif-display text-3xl md:text-4xl block text-bone">1. What is your name?</label>
+                            <input type="text" id="user-name" placeholder="Type your name here..." required class="w-full bg-transparent border-b-2 border-bone/30 py-3 text-lg md:text-xl text-bone focus:outline-none focus:border-terracotta transition-colors placeholder:text-bone/30">
+                            <div class="flex justify-end pt-2">
+                                <button type="button" onclick="nextStep(2)" class="px-6 py-2.5 bg-terracotta text-bone text-xs uppercase tracking-widest font-semibold rounded-full hover:bg-terracotta/80 transition-colors cursor-pointer">Continue →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Contact -->
+                        <div class="form-step space-y-3 hidden" id="step-2">
+                            <label class="serif-display text-3xl md:text-4xl block text-bone">2. How can Dr. Manuel's office reach you?</label>
+                            <input type="text" id="user-contact" placeholder="Email address or phone number..." required class="w-full bg-transparent border-b-2 border-bone/30 py-3 text-lg md:text-xl text-bone focus:outline-none focus:border-terracotta transition-colors placeholder:text-bone/30">
+                            <div class="flex justify-between pt-2">
+                                <button type="button" onclick="prevStep(1)" class="text-xs uppercase tracking-widest text-bone/60 hover:text-bone cursor-pointer">← Back</button>
+                                <button type="button" onclick="nextStep(3)" class="px-6 py-2.5 bg-terracotta text-bone text-xs uppercase tracking-widest font-semibold rounded-full hover:bg-terracotta/80 transition-colors cursor-pointer">Continue →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Message -->
+                        <div class="form-step space-y-3 hidden" id="step-3">
+                            <label class="serif-display text-3xl md:text-4xl block text-bone">3. What would you like to share or explore?</label>
+                            <textarea id="user-message" rows="4" placeholder="Write briefly what brings you here today..." required class="w-full bg-transparent border border-bone/30 rounded-xl p-4 text-base text-bone focus:outline-none focus:border-terracotta transition-colors placeholder:text-bone/30"></textarea>
+                            <div class="flex justify-between pt-2">
+                                <button type="button" onclick="prevStep(2)" class="text-xs uppercase tracking-widest text-bone/60 hover:text-bone cursor-pointer">← Back</button>
+                                <button type="submit" class="px-8 py-3 bg-terracotta text-bone text-xs uppercase tracking-widest font-semibold rounded-full hover:bg-terracotta/80 transition-colors cursor-pointer">SEND MESSAGE →</button>
+                            </div>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div id="form-success" class="hidden text-center py-12 space-y-4">
+                            <span class="serif-display text-5xl text-terracotta">Conversation Initiated.</span>
+                            <p class="text-bone/80 text-base max-w-md mx-auto">Thank you. Dr. Manuel's office has received your message and will reach out shortly. Starting the conversation is the first step.</p>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Footer Verified Info -->
+                <div class="mt-20 pt-12 border-t border-bone/10 grid grid-cols-1 md:grid-cols-3 gap-8 text-xs text-bone/60">
+                    <div>
+                        <span class="text-bone font-semibold block mb-1 uppercase tracking-wider">Location</span>
+                        Austin, Texas
+                    </div>
+                    <div>
+                        <span class="text-bone font-semibold block mb-1 uppercase tracking-wider">Practice Reference</span>
+                        Licensed Professional Counselor
+                    </div>
+                    <div>
+                        <span class="text-bone font-semibold block mb-1 uppercase tracking-wider">Professional Source</span>
+                        <a href="https://www.facebook.com/DrZcounseling/" target="_blank" rel="noopener noreferrer" class="hover:text-terracotta underline transition-colors">facebook.com/DrZcounseling</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const navDrawer = document.getElementById('nav-drawer');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        menuBtn.addEventListener('click', () => {
+            navDrawer.classList.remove('translate-y-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            navDrawer.classList.add('translate-y-full');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navDrawer.classList.add('translate-y-full');
+            });
+        });
+
+        const wordCards = document.querySelectorAll('.word-card');
+        const wordDescText = document.getElementById('word-desc-text');
+
+        wordCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const desc = card.getAttribute('data-desc');
+                wordDescText.textContent = desc;
+                wordDescText.classList.add('text-terracotta');
+            });
+            card.addEventListener('mouseleave', () => {
+                wordDescText.textContent = "Hover over any pillar above to explore how context informs your story.";
+                wordDescText.classList.remove('text-terracotta');
+            });
+        });
+
+        const constellationNodes = document.querySelectorAll('.constellation-node');
+        const mapFeedback = document.getElementById('map-feedback');
+
+        constellationNodes.forEach(node => {
+            node.addEventListener('mouseenter', () => {
+                const info = node.getAttribute('data-info');
+                mapFeedback.textContent = info;
+                mapFeedback.classList.add('text-terracotta', 'font-semibold');
+            });
+            node.addEventListener('mouseleave', () => {
+                mapFeedback.textContent = "[ Hover over nodes to inspect systemic connection ]";
+                mapFeedback.classList.remove('text-terracotta', 'font-semibold');
+            });
+        });
+
+        function nextStep(stepNum) {
+            document.querySelectorAll('.form-step').forEach(el => el.classList.add('hidden'));
+            document.getElementById('step-' + stepNum).classList.remove('hidden');
+        }
+
+        function prevStep(stepNum) {
+            document.querySelectorAll('.form-step').forEach(el => el.classList.add('hidden'));
+            document.getElementById('step-' + stepNum).classList.remove('hidden');
+        }
+
+        function submitMessage() {
+            document.querySelectorAll('.form-step').forEach(el => el.classList.add('hidden'));
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+
+        const heroTitle = document.getElementById('hero-title');
+        const wordStory = document.getElementById('word-story');
+        const wordBegin = document.getElementById('word-begin');
+
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 15;
+            const y = (e.clientY / window.innerHeight - 0.5) * 15;
+            if (wordStory && wordBegin) {
+                wordStory.style.transform = `translate(${x}px, ${y}px)`;
+                wordBegin.style.transform = `translate(${-x}px, ${-y}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
